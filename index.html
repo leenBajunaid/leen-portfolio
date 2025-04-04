@@ -1,27 +1,248 @@
+// File structure:
+// leen-portfolio/
+//     index.html
+//     style.css
+//     assets/
+//         pdf/
+//             leen-bajunaid-cv.pdf
+
+// === index.html ===
+/*
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Leen Bajunaid | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leen Bajunaid | Cybersecurity Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </head>
 <body>
-  <div class="hero">
+  <header class="fade-in">
     <h1>Leen Bajunaid</h1>
-    <p>Fresh Graduate in Cybersecurity</p>
-    <a href="assets/pdf/leen-bajunaid-cv.pdf" download class="btn">Download My CV</a>
-  </div>
+    <p>Cybersecurity Specialist | SOC Analyst | Ethical Hacking Enthusiast</p>
+    <button onclick="toggleTheme()">🌓 Toggle Theme</button>
+  </header>
 
-  <section class="projects">
+  <nav class="fade-in">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+    <a href="assets/pdf/leen-bajunaid-cv.pdf" download>Download CV</a>
+  </nav>
+
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>I am a passionate cybersecurity specialist trained in SOC operations, with interests in ethical hacking, threat analysis, and security monitoring. I’ve worked in real-world environments investigating incidents and strengthening security policies.</p>
+  </section>
+
+  <section id="education" class="fade-in">
+    <h2>Education</h2>
+    <p><strong>Effat University</strong> (2021 – 2025)<br>
+    B.Sc. in Computer Science – Specialization in Cybersecurity</p>
+  </section>
+
+  <section id="projects" class="fade-in">
     <h2>Projects</h2>
     <ul>
-      <li><strong>Hythrmia:</strong> Smart IoT Security Scanner</li>
+      <li><strong>Hythrmia:</strong> Smart IoT Devices Scanner</li>
       <li><strong>Deepfake Detector:</strong> AI-Based Fake Video Identifier</li>
+      <li><strong>Web Application Firewall:</strong> Node.js, Express.js, Helmet.js</li>
+      <li><strong>Advanced Web Security App:</strong> React Native, Nikto, Nmap</li>
+      <li><strong>Encryption/Decryption Tool:</strong> Python, PyCryptodome</li>
     </ul>
   </section>
 
-  <footer>
-    <p>Contact: bajunaidleen@gmail.com | GitHub: github.com/leenBajunaid</p>
+  <section id="experience" class="fade-in">
+    <h2>Experience</h2>
+    <p><strong>IT Security Intern – Bupa Health Care Insurance</strong> (Jun 2024 – Dec 2024)<br>
+    • Managed email security incidents<br>
+    • Investigated proxy and EDR/NDR issues<br>
+    • Helped create security policies and procedures</p>
+  </section>
+
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> Java, Python, C, C++, JavaScript, PHP<br>
+    <strong>Web:</strong> HTML, CSS, SQL<br>
+    <strong>OS:</strong> macOS, Linux</p>
+  </section>
+
+  <section id="certifications" class="fade-in">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Certified SOC Analyst – EC-Council (Nov 2026)</li>
+      <li>Java Programming – Duke University</li>
+      <li>Generative AI – Introduction and Applications</li>
+      <li>Cybersecurity Tools & Attacks – IBM Skills Network</li>
+      <li>Agile Project Management – Google</li>
+      <li>Modeling Software Systems – UML</li>
+      <li>Intro to AI – Skills Network</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <form action="mailto:bajunaidleen@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer class="fade-in">
+    <p>Contact: bajunaidleen@gmail.com | LinkedIn: <a href="https://www.linkedin.com/in/leen-b-25646022a" target="_blank">leen-b-25646022a</a></p>
   </footer>
 </body>
 </html>
+*/
+
+// === style.css ===
+/*
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f, #c2e9fb);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+header, nav, section, footer {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+header {
+  background: #fff3e0;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: #ff7043;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #f8bbd0;
+  padding: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  background: #b3e5fc;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  background: #81d4fa;
+}
+
+section {
+  padding: 2rem;
+  background: #fff;
+  margin: 1rem auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.dark-mode section {
+  background: #2c2c2c;
+}
+
+h2 {
+  color: #ec407a;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  padding: 0.75rem;
+  border: none;
+  background-color: #29b6f6;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0288d1;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: white;
+}
+
+footer a {
+  color: #29b6f6;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    margin: 1rem;
+  }
+}
+*/
