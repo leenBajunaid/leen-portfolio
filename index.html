@@ -31,11 +31,11 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: #fff;
+      background: #333;
+      color: white;
     }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .hero h1 {
+      color: rgba(255, 255, 255, 0.95);
     }
     .btn-theme {
       background-color: #29b6f6;
@@ -80,6 +80,12 @@
     .dark-mode .dark-toggle {
       color: #fff;
     }
+    .project-link {
+      display: list-item;
+      list-style-type: disc;
+      color: #007bff;
+      margin-left: 1.5rem;
+    }
   </style>
 </head>
 <body>
@@ -108,7 +114,7 @@
   </nav>
 
   <header class="hero" data-aos="fade-up">
-    <h1 class="display-3 fw-bold text-primary">Leen Bajunaid</h1>
+    <h1 class="display-3 fw-bold">Leen Bajunaid</h1>
     <p class="lead">Cybersecurity Student | SOC Analyst | Ethical Hacking Enthusiast</p>
   </header>
 
@@ -119,10 +125,12 @@
 
   <section id="projects" class="container" data-aos="fade-up">
     <h2 class="text-warning">Projects</h2>
-    <a href="#" class="project-link"><strong>Hythrmia:</strong> Smart IoT Devices Scanner</a>
-    <a href="#" class="project-link"><strong>Web Application Firewall</strong> using Node.js, Helmet.js</a>
-    <a href="#" class="project-link"><strong>Encryption/Decryption Tool</strong> with PyCryptodome</a>
-    <a href="#" class="project-link"><strong>Advanced Web Security App</strong> built with React Native</a>
+    <ul>
+      <a href="#" class="project-link"><strong>Hythrmia:</strong> Smart IoT Devices Scanner</a>
+      <a href="https://github.com/leenBajunaid/app_firewall" target="_blank" class="project-link"><strong>Web Application Firewall</strong> using Node.js, Helmet.js</a>
+      <a href="https://github.com/leenBajunaid/crypto_encrypt_decrypt" target="_blank" class="project-link"><strong>Encryption/Decryption Tool</strong> with PyCryptodome</a>
+      <a href="#" class="project-link"><strong>Advanced Web Security App</strong> built with React Native</a>
+    </ul>
   </section>
 
   <section id="experience" class="container" data-aos="fade-up">
