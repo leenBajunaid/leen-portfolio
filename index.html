@@ -5,15 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leen Bajunaid | Cybersecurity Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #e3f2fd, #ffe0b2, #f8bbd0);
       color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background: #1c1c1c;
+      color: #eee;
     }
     .navbar {
       background: #ffccbc;
+    }
+    .navbar .btn-theme {
+      margin-left: 1rem;
     }
     .hero {
       min-height: 100vh;
@@ -23,7 +32,6 @@
       align-items: center;
       text-align: center;
       background: #fff;
-      animation: fadeIn 2s ease-in-out;
     }
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
@@ -35,7 +43,6 @@
       border: none;
       border-radius: 30px;
       padding: 0.75rem 1.5rem;
-      margin: 10px;
     }
     .btn-theme:hover {
       background-color: #0288d1;
@@ -53,19 +60,10 @@
       color: #29b6f6;
       text-decoration: none;
     }
-    a.project-link {
-      display: block;
-      margin-bottom: 10px;
-      color: #007bff;
-    }
-    a.project-link:hover {
-      text-decoration: underline;
-    }
     .reach-out {
       background: #f1f8ff;
       padding: 3rem;
       text-align: center;
-      animation: fadeIn 2s ease-in-out;
     }
     .reach-out h3 {
       font-size: 1.8rem;
@@ -73,6 +71,14 @@
     }
     .reach-out p {
       font-size: 1.2rem;
+    }
+    .dark-toggle {
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .dark-mode .dark-toggle {
+      color: #fff;
     }
   </style>
 </head>
@@ -90,34 +96,36 @@
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link btn-theme" href="assets/pdf/leen-bajunaid-cv.pdf" download>Download CV</a></li>
+          <li class="nav-item">
+            <a class="nav-link btn-theme" href="assets/pdf/leen-bajunaid-cv.pdf" download><i class="bi bi-download"></i> Download CV</a>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link dark-toggle" onclick="toggleDarkMode()">🌓</span>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="hero">
+  <header class="hero" data-aos="fade-up">
     <h1 class="display-3 fw-bold text-primary">Leen Bajunaid</h1>
     <p class="lead">Cybersecurity Student | SOC Analyst | Ethical Hacking Enthusiast</p>
   </header>
 
-  <section id="about" class="container">
+  <section id="about" class="container" data-aos="fade-up">
     <h2 class="text-danger">About Me</h2>
-    <p>I am a driven and detail-oriented cybersecurity student with hands-on experience in SOC environments, security operations, and ethical hacking. I specialize in threat detection, incident response, log analysis, and monitoring enterprise networks. I’ve interned at Bupa Arabia where I investigated phishing emails, managed security tickets, and collaborated on policy enforcement. I’m passionate about securing critical infrastructure and exploring new cybersecurity technologies. I enjoy working with Wireshark, Nmap, Burp Suite, and SIEM tools to uncover and resolve vulnerabilities, contributing to safer digital ecosystems.</p>
+    <p>I’m a passionate and curious cybersecurity student who’s always excited to learn something new. I thrive on diving into real-world problems, whether it's analyzing logs, investigating alerts, or understanding how systems are attacked and protected. I love the thrill of defending digital spaces and discovering hidden vulnerabilities. My interests range from network security and ethical hacking to building smart tools that automate detection and response. What drives me most is the idea of making the digital world safer, smarter, and more resilient — and I enjoy connecting with people who feel the same way.</p>
   </section>
 
-  <section id="projects" class="container">
+  <section id="projects" class="container" data-aos="fade-up">
     <h2 class="text-warning">Projects</h2>
     <a href="#" class="project-link"><strong>Hythrmia:</strong> Smart IoT Devices Scanner</a>
     <a href="#" class="project-link"><strong>Web Application Firewall</strong> using Node.js, Helmet.js</a>
     <a href="#" class="project-link"><strong>Encryption/Decryption Tool</strong> with PyCryptodome</a>
     <a href="#" class="project-link"><strong>Advanced Web Security App</strong> built with React Native</a>
-    <a href="#" class="project-link"><strong>Cybersecurity Visualization Dashboard</strong></a>
-    <a href="#" class="project-link"><strong>Password Strength Analyzer</strong></a>
-    <a href="#" class="project-link"><strong>Vulnerability Scanner</strong> for open ports and weak credentials</a>
   </section>
 
-  <section id="experience" class="container">
+  <section id="experience" class="container" data-aos="fade-up">
     <h2 class="text-primary">Experience</h2>
     <p><strong>IT Security Intern – Bupa Arabia</strong> (Jun–Dec 2024)<br>
     • Responded to email/phishing alerts<br>
@@ -125,7 +133,7 @@
     • Supported policy creation and monitoring</p>
   </section>
 
-  <section id="skills" class="container">
+  <section id="skills" class="container" data-aos="fade-up">
     <h2 class="text-danger">Skills</h2>
     <ul>
       <li><strong>Languages:</strong> Java, Python, C++, PHP, JavaScript</li>
@@ -136,9 +144,9 @@
     </ul>
   </section>
 
-  <section class="reach-out">
-    <h3>Reach Out to Me</h3>
-    <p>If you'd like to collaborate, ask questions, or just say hi, feel free to email me at <a href="mailto:bajunaidleen@gmail.com">bajunaidleen@gmail.com</a>. I'm always open to discussing cybersecurity, projects, or new opportunities in the tech space.</p>
+  <section class="reach-out" data-aos="fade-up">
+    <h3>Let's Connect</h3>
+    <p>Whether you’d like to say hi, ask a question, or offer an opportunity, feel free to <strong>reach out to me</strong> anytime at <a href="mailto:bajunaidleen@gmail.com">bajunaidleen@gmail.com</a>. I'm currently looking for exciting roles in cybersecurity — especially in SOC analysis, vulnerability testing, and digital defense. Let's build a safer world together!</p>
   </section>
 
   <footer>
@@ -147,6 +155,12 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>
-
