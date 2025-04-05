@@ -53,6 +53,27 @@
       color: #29b6f6;
       text-decoration: none;
     }
+    a.project-link {
+      display: block;
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+    a.project-link:hover {
+      text-decoration: underline;
+    }
+    .reach-out {
+      background: #f1f8ff;
+      padding: 3rem;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .reach-out h3 {
+      font-size: 1.8rem;
+      color: #00796b;
+    }
+    .reach-out p {
+      font-size: 1.2rem;
+    }
   </style>
 </head>
 <body>
@@ -69,7 +90,6 @@
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           <li class="nav-item"><a class="nav-link btn-theme" href="assets/pdf/leen-bajunaid-cv.pdf" download>Download CV</a></li>
         </ul>
       </div>
@@ -78,21 +98,23 @@
 
   <header class="hero">
     <h1 class="display-3 fw-bold text-primary">Leen Bajunaid</h1>
-    <p class="lead">Cybersecurity Specialist | SOC Analyst | Ethical Hacking Enthusiast</p>
+    <p class="lead">Cybersecurity Student | SOC Analyst | Ethical Hacking Enthusiast</p>
   </header>
 
   <section id="about" class="container">
     <h2 class="text-danger">About Me</h2>
-    <p>I’m a cybersecurity enthusiast focused on SOC operations, ethical hacking, and threat intelligence. My passion lies in analyzing, defending, and building resilient systems.</p>
+    <p>I am a driven and detail-oriented cybersecurity student with hands-on experience in SOC environments, security operations, and ethical hacking. I specialize in threat detection, incident response, log analysis, and monitoring enterprise networks. I’ve interned at Bupa Arabia where I investigated phishing emails, managed security tickets, and collaborated on policy enforcement. I’m passionate about securing critical infrastructure and exploring new cybersecurity technologies. I enjoy working with Wireshark, Nmap, Burp Suite, and SIEM tools to uncover and resolve vulnerabilities, contributing to safer digital ecosystems.</p>
   </section>
 
   <section id="projects" class="container">
     <h2 class="text-warning">Projects</h2>
-    <ul>
-      <li><strong>Hythrmia:</strong> Smart IoT Devices Scanner</li>
-      <li><strong>Web Application Firewall</strong> using Node.js, Helmet.js</li>
-      <li><strong>Encryption/Decryption Tool:</strong> Python, PyCryptodome</li>
-    </ul>
+    <a href="#" class="project-link"><strong>Hythrmia:</strong> Smart IoT Devices Scanner</a>
+    <a href="#" class="project-link"><strong>Web Application Firewall</strong> using Node.js, Helmet.js</a>
+    <a href="#" class="project-link"><strong>Encryption/Decryption Tool</strong> with PyCryptodome</a>
+    <a href="#" class="project-link"><strong>Advanced Web Security App</strong> built with React Native</a>
+    <a href="#" class="project-link"><strong>Cybersecurity Visualization Dashboard</strong></a>
+    <a href="#" class="project-link"><strong>Password Strength Analyzer</strong></a>
+    <a href="#" class="project-link"><strong>Vulnerability Scanner</strong> for open ports and weak credentials</a>
   </section>
 
   <section id="experience" class="container">
@@ -108,24 +130,15 @@
     <ul>
       <li><strong>Languages:</strong> Java, Python, C++, PHP, JavaScript</li>
       <li><strong>Web:</strong> HTML, CSS, SQL</li>
-      <li><strong>Tools:</strong> Kali Linux, Wireshark, OWASP ZAP</li>
+      <li><strong>Tools:</strong> Kali Linux, Wireshark, OWASP ZAP, Nmap, Burp Suite, Postman</li>
+      <li><strong>Platforms:</strong> macOS, Linux, Windows</li>
+      <li><strong>Security Concepts:</strong> Log analysis, threat detection, vulnerability scanning, firewall configuration</li>
     </ul>
   </section>
 
-  <section id="contact" class="container">
-    <h2 class="text-warning">Contact</h2>
-    <form action="mailto:bajunaidleen@gmail.com" method="post" enctype="text/plain">
-      <div class="mb-3">
-        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-      </div>
-      <div class="mb-3">
-        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-      </div>
-      <div class="mb-3">
-        <textarea name="message" class="form-control" placeholder="Your Message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-theme">Send Message</button>
-    </form>
+  <section class="reach-out">
+    <h3>Reach Out to Me</h3>
+    <p>If you'd like to collaborate, ask questions, or just say hi, feel free to email me at <a href="mailto:bajunaidleen@gmail.com">bajunaidleen@gmail.com</a>. I'm always open to discussing cybersecurity, projects, or new opportunities in the tech space.</p>
   </section>
 
   <footer>
@@ -136,3 +149,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
