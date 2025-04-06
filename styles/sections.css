@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #bbdefb, #e3f2fd);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 18px;
+    color: #212121;
+  }
+  .section {
+    padding: 80px 0;
+  }
+  h1 {
+    color: #e91e63;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
