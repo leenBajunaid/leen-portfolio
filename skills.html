@@ -1,16 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skills | Leen Bajunaid</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="styles/nav.css"/>
-  <link rel="stylesheet" href="styles/sections.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding-top: 70px;
+    }
+
+    .skills-section {
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .skills-box {
+      max-width: 800px;
+      width: 100%;
+      background-color: #1f1f1f;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .skills-box h1,
+    .certifications-title {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #90caf9;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .skills-box ul {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 1.1rem;
+    }
+
+    .skills-box li {
+      margin-bottom: 12px;
+    }
+
+    .certificates-section {
+      max-width: 800px;
+      width: 100%;
+      background-color: #1f1f1f;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .certificates-section h2 {
+      color: #90caf9;
+      margin-bottom: 20px;
+    }
+
+    .certificates-section img {
+      max-width: 100%;
+      max-height: 350px;
+      border-radius: 10px;
+      border: 2px solid #444;
+      box-shadow: 0 0 10px rgba(144, 202, 249, 0.5);
+    }
+
+    .navbar {
+      background-color: #121212;
+      border-bottom: 1px solid #333;
+    }
+
+    .navbar a {
+      color: #ccc;
+    }
+
+    .navbar a:hover {
+      color: #fff;
+    }
+
+    .nav-link.active {
+      color: #ffffff !important;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">Leen</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -18,25 +106,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="experience.html">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="skills.html">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="section" data-aos="fade-up">
-    <div class="container">
+  <section class="skills-section container">
+    <div class="skills-box">
       <h1>Skills</h1>
       <ul>
         <li><strong>Languages:</strong> Java, Python, C++, PHP, JavaScript</li>
@@ -46,13 +126,18 @@
         <li><strong>Security Concepts:</strong> Log analysis, threat detection, vulnerability scanning, firewall configuration</li>
       </ul>
     </div>
-</div>
+
+    <div class="certifications-title">Certifications</div>
+
+    <div class="certificates-section">
+      <h2>EC-Council Certification</h2>
+      <img src="EC.jpg" alt="EC Council Certificate">
+    </div>
+  </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
+
 </html>
+
 
