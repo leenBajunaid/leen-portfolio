@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me - Leen Bajunaid</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me & Education - Leen Bajunaid</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -13,57 +13,6 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding-top: 70px;
-    }
-
-    .about-section {
-      padding: 80px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-    }
-
-    .about-text {
-      flex: 1 1 500px;
-      max-width: 600px;
-      animation: fadeInLeft 1.2s ease-out;
-    }
-
-    .about-text h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #90caf9;
-      margin-bottom: 30px;
-    }
-
-    .about-text p {
-      font-size: 1.25rem;
-      line-height: 1.8;
-      color: #e0e0e0;
-    }
-
-    .about-image {
-      flex: 1 1 300px;
-      max-width: 400px;
-      height: 400px;
-      background-color: #1f1f1f;
-      border-radius: 15px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: fadeInRight 1.2s ease-out;
-    }
-
-    @keyframes fadeInLeft {
-      from { opacity: 0; transform: translateX(-40px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes fadeInRight {
-      from { opacity: 0; transform: translateX(40px); }
-      to { opacity: 1; transform: translateX(0); }
     }
 
     .navbar {
@@ -83,6 +32,101 @@
       color: #ffffff !important;
       font-weight: bold;
     }
+
+    .about-section,
+    .education-section {
+      padding: 80px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .about-text,
+    .education-text {
+      flex: 1 1 500px;
+      max-width: 600px;
+      animation: fadeInLeft 1.2s ease-out;
+    }
+
+    .about-text h1,
+    .education-text h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #90caf9;
+      margin-bottom: 30px;
+    }
+
+    .about-text p,
+    .education-text p {
+      font-size: 1.2rem;
+      color: #e0e0e0;
+      line-height: 1.8;
+    }
+
+    .about-image,
+    .logo-box {
+      flex: 1 1 300px;
+      max-width: 400px;
+      height: 400px;
+      background-color: #1f1f1f;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeInRight 1.2s ease-out;
+    }
+
+    .about-image img,
+    .logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .education-section {
+      background-color: #1f1f1f;
+      border-radius: 15px;
+      padding: 40px;
+    }
   </style>
 </head>
 
@@ -97,9 +141,9 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="education.html">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
         </ul>
@@ -111,12 +155,26 @@
   <section class="about-section container">
     <div class="about-text">
       <h1>About Me</h1>
-      <p>I studied at <strong>Effat University</strong> as a Computer Science student specialized in Cybersecurity. I’m passionate about protecting digital systems and exploring advanced tools to defend networks. I’ve worked as a SOC Analyst and developed hands-on experience with real-time monitoring, malware analysis, and vulnerability detection. I’m driven by curiosity and a mission to make the digital world safer, one packet at a time.</p>
+      <p>I studied at <strong>Effat University</strong> as a Computer Science student specialized in Cybersecurity. I'm passionate about protecting digital systems and exploring advanced tools to defend networks. I’ve worked as a SOC Analyst and developed hands-on experience with real-time monitoring, malware analysis, and vulnerability detection. I’m driven by curiosity and a mission to make the digital world safer, one packet at a time.</p>
     </div>
     <div class="about-image">
-        <img src="leen.png" alt="Leen Bajunaid" class="img-fluid rounded-circle" style="object-fit: cover; width: 100%; height: 100%; border-radius: 15px;">
-      </div>
-      
+      <img src="leen.png33" alt="Leen Bajunaid">
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education-section container">
+    <div class="education-text">
+      <h1>Education</h1>
+      <p><strong>Name:</strong> Leen Ali Bajunaid</p>
+      <p><strong>Major:</strong> Computer Science, specialized in Cybersecurity</p>
+      <p><strong>University:</strong> Effat University</p>
+      <p><strong>Years:</strong> 2021 – 2025</p>
+    </div>
+
+    <div class="logo-box">
+      <img src="effat.png" alt="Effat University Logo">
+    </div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
