@@ -7,30 +7,57 @@
   <title>About Me & Education - Leen Bajunaid</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    :root {
+      --bg: #121212;
+      --navbar-bg: #121212;
+      --text: #e0e0e0;
+      --highlight: #90caf9;
+      --button-border: #444;
+      --card-bg: #1f1f1f;
+    }
+
+    [data-theme="light"] {
+      --bg: #f2f2f2;
+      --navbar-bg: #d0f0c0;
+      --text: #333;
+      --highlight: #2e7d32;
+      --button-border: #2e7d32;
+      --card-bg: #e9e9e9;
+    }
+
     body {
-      background-color: #121212;
-      color: #ffffff;
+      background-color: var(--bg);
+      color: var(--text);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding-top: 70px;
     }
 
     .navbar {
-      background-color: #121212;
-      border-bottom: 1px solid #333;
+      background-color: var(--navbar-bg);
+      border-bottom: 1px solid var(--button-border);
     }
 
     .navbar a {
-      color: #ccc;
+      color: var(--text);
     }
 
     .navbar a:hover {
-      color: #fff;
+      color: var(--highlight);
     }
 
     .nav-link.active {
-      color: #ffffff !important;
+      color: var(--highlight) !important;
       font-weight: bold;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--highlight);
+      margin-left: 10px;
+      cursor: pointer;
     }
 
     .about-section,
@@ -55,14 +82,14 @@
     .education-text h1 {
       font-size: 3rem;
       font-weight: bold;
-      color: #90caf9;
+      color: var(--highlight);
       margin-bottom: 30px;
     }
 
     .about-text p,
     .education-text p {
       font-size: 1.2rem;
-      color: #e0e0e0;
+      color: var(--text);
       line-height: 1.8;
     }
 
@@ -139,13 +166,16 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggle" title="Toggle light/dark mode">🌗</button>
+          </li>
         </ul>
       </div>
     </div>
@@ -158,7 +188,7 @@
       <p>I studied at <strong>Effat University</strong> as a Computer Science student specialized in Cybersecurity. I'm passionate about protecting digital systems and exploring advanced tools to defend networks. I’ve worked as a SOC Analyst and developed hands-on experience with real-time monitoring, malware analysis, and vulnerability detection. I’m driven by curiosity and a mission to make the digital world safer, one packet at a time.</p>
     </div>
     <div class="about-image">
-      <img src="leen.png33" alt="Leen Bajunaid">
+      <img src="leen.png" alt="Leen Bajunaid">
     </div>
   </section>
 
